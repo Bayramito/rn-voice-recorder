@@ -6,7 +6,7 @@ const AudioRecorder = () => {
   const {recording, levels, recordingTime, toggleRecording} = useAudio();
   return (
     <View style={styles.container}>
-      <AudioVisualizer width={SCREEN_WIDTH} levels={levels.value} height={50} />
+      <AudioVisualizer width={SCREEN_WIDTH} levels={levels} height={50} />
       <View style={styles.controls}>
         <Pressable style={styles.btn} onPress={toggleRecording}>
           <Text style={styles.text}>{recording ? 'Stop' : 'Record'}</Text>
